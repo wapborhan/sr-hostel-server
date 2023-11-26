@@ -5,14 +5,16 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3300;
 const globalErrorHandler = require("./utils/globalErrorHandler");
-const menuRoutes = require("./routes/menu/index");
+const allMeals = require("./routes/menu/index");
 const addUser = require("./routes/user/index");
+const singleMeal = require("./routes/single-menu/index");
 
 applyMiddleware(app);
 
 // Routes
-app.use(menuRoutes);
+app.use(allMeals);
 app.use(addUser);
+app.use(singleMeal);
 app.get("/", (req, res) => {
   res.send("SR Hostel is running....");
 });
