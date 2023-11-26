@@ -6,11 +6,13 @@ const app = express();
 const port = process.env.PORT || 3300;
 const globalErrorHandler = require("./utils/globalErrorHandler");
 const menuRoutes = require("./routes/menu/index");
+const addUser = require("./routes/user/index");
 
 applyMiddleware(app);
 
 // Routes
 app.use(menuRoutes);
+app.use(addUser);
 app.get("/", (req, res) => {
   res.send("SR Hostel is running....");
 });
