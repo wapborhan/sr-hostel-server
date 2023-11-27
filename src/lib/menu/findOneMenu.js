@@ -1,7 +1,7 @@
-const SingleMenu = require("../../models/SingleMenu");
+const Menu = require("../../models/Menu");
 
 const findOneMenu = async (filter) => {
-  const meal = await SingleMenu.findOne(filter);
+  const meal = await Menu.findOne(filter);
   return meal;
 };
 

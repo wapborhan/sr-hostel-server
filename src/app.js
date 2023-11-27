@@ -9,6 +9,7 @@ const allMeals = require("./routes/menu/index");
 const addUser = require("./routes/user/index");
 const singleMeal = require("./routes/single-menu/index");
 const allUsers = require("./routes/all-users/index");
+const addMeals = require("./routes/add-meals/index");
 
 applyMiddleware(app);
 
@@ -17,6 +18,8 @@ app.use(allMeals);
 app.use(addUser);
 app.use(singleMeal);
 app.use(allUsers);
+app.use(addMeals);
+// app.use(addUpcomingMeals);
 app.get("/", (req, res) => {
   res.send("SR Hostel is running....");
 });
