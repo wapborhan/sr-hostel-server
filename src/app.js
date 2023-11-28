@@ -44,11 +44,13 @@ app.all("*", (req, res, next) => {
 // error handling middleware
 app.use(globalErrorHandler);
 
-const main = async () => {
-  await connectDB();
-  app.listen(port, () => {
-    console.log(`SR Hostel is running on port ${port}`);
-  });
-};
+// const main = async () => {
+//   await connectDB();
+//   app.listen(port, () => {
+//     console.log(`SR Hostel is running on port ${port}`);
+//   });
+// };
 
-main();
+// main();
+
+module.exports = app;
