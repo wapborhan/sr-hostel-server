@@ -13,6 +13,7 @@ const addMeals = require("./routes/add-meals/index");
 const addUpcomingMeals = require("./routes/add-up-meals/UpcomingMeals");
 const allMealsUpcomin = require("./routes/all-up-meals/AllMeals");
 const addRequestMeals = require("./routes/add-req-meals/addRequestMeals");
+const allRequestMeals = require("./routes/all-req-meals/allRequestMeals");
 
 applyMiddleware(app);
 
@@ -22,7 +23,8 @@ app.use(addUpcomingMeals);
 app.use(allMeals);
 app.use(allMealsUpcomin);
 app.use(addRequestMeals);
-// app.use(allRequestMeals);
+app.use(allRequestMeals);
+// app.use(allServMeals);
 app.use(singleMeal);
 app.use(addUser);
 app.use(allUsers);

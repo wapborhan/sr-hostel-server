@@ -10,8 +10,8 @@ const MenuSchema = new Schema({
   rating: Number,
   likes_count: Number,
   reviews: Number,
-  distributor_name: String,
-  distributor_email: String,
+  req_name: String,
+  req_email: String,
   req_date: Date,
   status: String,
 });
