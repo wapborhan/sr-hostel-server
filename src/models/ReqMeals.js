@@ -8,12 +8,13 @@ const MenuSchema = new Schema({
   description: String,
   price: Number,
   rating: Number,
-  time: Date,
   likes_count: Number,
   reviews: Number,
   distributor_name: String,
   distributor_email: String,
+  req_date: Date,
+  status: String,
 });
-const Menu = model("menus", MenuSchema);
+const ReqMeals = model("reqmeals", MenuSchema);
 
-module.exports = Menu;
+module.exports = ReqMeals;

@@ -8,7 +8,7 @@ const MenuSchema = new Schema({
   description: String,
   price: Number,
   rating: Number,
-  time: String,
+  time: Date,
   likes_count: Number,
   reviews: Number,
   distributor_name: String,
