@@ -1,7 +1,7 @@
-const User = require("../../models/User");
+const AllUser = require("../../models/AllUser");
 
 const postUserData = async (user) => {
-  const userData = new User(user);
+  const userData = new AllUser(user);
   const cursor = await userData
     .save()
     .then((result) => {
