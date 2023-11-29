@@ -1,6 +1,3 @@
-// payment?.subscription
-// payment?.email
-
 const AllUser = require("../../models/AllUser");
 
 const updateUser = async (payment) => {

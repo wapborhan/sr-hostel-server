@@ -19,6 +19,7 @@ const allAdminUser = require("./routes/get-admin/allAdminUser");
 const allPricing = require("./routes/pricing/allPricing");
 const createPayIntent = require("./routes/create-pay-intent/createPayIntent");
 const addPayment = require("./routes/add-payment/addPayment");
+const makeUserAdmin = require("./routes/add-admin/makeAdmin");
 
 applyMiddleware(app);
 
@@ -33,7 +34,7 @@ app.use(allServMeals);
 app.use(singleMeal);
 app.use(addUser);
 app.use(allUsers);
-// app.use(makeUserAdmin);
+app.use(makeUserAdmin);
 app.use(allAdminUser);
 app.use(allPricing);
 app.use(createPayIntent);
