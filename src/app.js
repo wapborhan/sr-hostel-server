@@ -16,6 +16,7 @@ const addRequestMeals = require("./routes/add-req-meals/addRequestMeals");
 const allRequestMeals = require("./routes/all-req-meals/allRequestMeals");
 const allServMeals = require("./routes/all-serv-meals/allServMeals");
 const allAdminUser = require("./routes/get-admin/allAdminUser");
+const allPricing = require("./routes/pricing/allPricing");
 
 applyMiddleware(app);
 
@@ -32,6 +33,8 @@ app.use(addUser);
 app.use(allUsers);
 // app.use(makeUserAdmin);
 app.use(allAdminUser);
+app.use(allPricing);
+// app.use(createPayIntent);
 
 app.get("/", (req, res) => {
   res.send("SR Hostel is running....");
