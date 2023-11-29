@@ -1,4 +1,4 @@
-const createIntent = require("../../api/user/createIntent");
+const createIntent = require("../../api/payment/createIntent");
 
 const router = require("express").Router();
 
