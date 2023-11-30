@@ -22,6 +22,7 @@ const addPayment = require("./routes/add-payment/addPayment");
 const makeUserAdmin = require("./routes/add-admin/makeAdmin");
 const deleteMeals = require("./routes/del-meals/deleteMeals");
 const updateMeals = require("./routes/update-meals/updateMeals");
+const upRequestMeals = require("./routes/update-req-meals/upRequestMeals");
 
 applyMiddleware(app);
 
@@ -34,6 +35,7 @@ app.use(deleteMeals);
 app.use(allMealsUpcomin);
 app.use(addRequestMeals);
 app.use(allRequestMeals);
+app.use(upRequestMeals);
 app.use(allServMeals);
 app.use(singleMeal);
 app.use(addUser);
