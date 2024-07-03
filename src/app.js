@@ -1,9 +1,8 @@
 const express = require("express");
-const applyMiddleware = require("./middlewares");
-const connectDB = require("./db/connectDB");
 require("dotenv").config();
 const app = express();
-const port = process.env.PORT || 3300;
+const path = require("path");
+const applyMiddleware = require("./middlewares");
 const globalErrorHandler = require("./utils/globalErrorHandler");
 const allMeals = require("./routes/meals/index");
 const addUser = require("./routes/user/index");
@@ -24,6 +23,8 @@ const deleteMeals = require("./routes/del-meals/deleteMeals");
 const updateMeals = require("./routes/update-meals/updateMeals");
 const upRequestMeals = require("./routes/update-req-meals/upRequestMeals");
 const singleUsers = require("./routes/singleUsers/singleUsers");
+
+app.use(express.static(path.join(__dirname, "public")));
 
 applyMiddleware(app);
 
@@ -48,8 +49,9 @@ app.use(allPricing);
 app.use(createPayIntent);
 app.use(addPayment);
 
+// Homepage
 app.get("/", (req, res) => {
-  res.send("SR Hostel is running....");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // handling all (get,post,update,delete.....) unhandled routes
